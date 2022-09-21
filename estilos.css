@@ -1,0 +1,88 @@
+body{
+    font-size:12px ;
+    font-family:Ariel,sans-serif;
+    background-color: #F0FFFF;
+    border: #E0FFFF;
+         
+}
+    h1{
+        margin: 10px auto;
+        text-align: center;
+        padding: 10px;
+        font-size: 30px;
+        }
+    form{
+        background-color:#E0FFFF;
+        font-size: 35px;
+        font-family: "Times New Roman",serif;
+        margin: 10px auto;
+        box-shadow: 4px 4px 16px #E0FFFF;
+        border: 3px solid;
+        text-align: center;
+        width: 350;
+        padding: 10px;
+        border: #E0FFFF;
+        border-radius: 1em;
+
+    }
+    form ul{
+        list-style: none;
+        padding:0 ;
+        margin: 0;
+    }
+    form li+li{
+        margin-top: 1px;
+    }
+    form input,textarea{
+        margin-top: 1px;
+        font-size: 10px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: #E0FFFF;
+        width: 100px;
+    }
+    form label{
+        margin-top: 1px;
+        font-size: 15px;
+        display: inline-block;
+        width: 150px;
+        text-align: right;
+
+    }
+    input:focus, textarea:focus {
+        border-color: #000;
+    }
+    textarea{
+        vertical-align: top;
+        height: 5em;
+        resize: vertical;
+    }
+    .button{
+        padding-left: 90px
+    }
+    button{
+        margin-left: .5em;
+        font: 0.5em;
+        background-color:#6ea7f1d2;
+        border-color:#6ea7f1d2 ;
+    }
+    form input:required{
+        background:#fff url(asterisco10.jpg)no-repeat 98%;
+    }
+    form textarea:required{
+        background:#fff url(asterisco10.jpg)no-repeat 98%;
+    }
+    form input:required:valid{
+        background:#fff url(valido.jpg)no-repeat 98%;
+        border-color: #b03535;
+    }
+    form textarea:required:valid{
+        background:#fff url(valido.jpg)no-repeat 98%;
+        border-color: #28981f;
+    }
+    form input:required:invalid{
+        background:#fff url(invalido.jpg)no-repeat 98%;
+        border-color: #28981f;  
+    }
+
+    
