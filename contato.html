@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author"content="Ismael Pereira Araujo">
+    <link rel="stylesheet" href="estilos.css">
     <title>Contato</title>
 </head>
 <body>
@@ -18,14 +19,17 @@
             </li>
             <li>
                 <label for="email">E-mail :</label>
-                <input type="email" id= "email" name="email">
+                <input type="email" placeholder="Ex.: usuario@servidor.com" name="email"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
             </li>
             <li>
-                <label for="mensagem">Digite a mensagem :</label>
-                <textarea id="mensagem" name="mensagem" rows="4" cols="50" wrap="hard"></textarea>
+                <label for="mensagem">Escreva aqui:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" cols="40" wrap="hard" required></textarea>
             </li>
         </ul>
-        <input type="submit"Value="Enviar">
+        <div class="button">
+            <button type="submit">Enviar</button>
+        </div>
+        
     </form>
 <tr>
     <td> <a href=" https://ismaelarauj.github.io/MinhaPaginaWeb/">Pagina Principal</a></td>
