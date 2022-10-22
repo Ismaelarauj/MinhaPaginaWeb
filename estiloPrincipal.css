@@ -41,3 +41,9 @@ body{
   font-family:Arial, sans-serif;
   background-color: rgb(10, 143, 114);
 }
+tbody a{
+    color:rgb(14, 14, 51);
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+}
