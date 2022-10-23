@@ -99,11 +99,4 @@ body{
             transform:translateY(4px) ;
 
         }
-        tr a{
-            font-size:12px ;
-            font-family:Ariel,sans-serif;
-            color:rgb(14, 14, 51);
-            padding:14px 16px;
-            text-align: center;
-            text-decoration:none;
-        }
+        
