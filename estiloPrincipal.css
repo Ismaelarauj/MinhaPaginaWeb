@@ -1,32 +1,72 @@
-
-nav ul{
+*{
+    margin:0px;
+    padding:0px;
+}
+#Principal{
+    position: relative;
+    font-family: monospace;
+    float:left;
+}
+#menu-principal{
     list-style-type: none;
-    margin:0;
-    padding:0;
-    overflow: hidden;
-    background-color: rgb(14, 14, 51);
+    padding-left:0;
     position: fixed;
-    top:0;
+    top: 0;
     width: 100%;
 }
-nav li{
+#menu-principal li{
+    position:relative;
+    padding: 1rem;
+    text-decoration: none;
+    transition-duration:0.5s;
+    background-color: rgb(14, 14, 51);
+    display:block;
     float: left;
 }
-nav li a{
-    display:block;
+#menu-principal li a{
     color: rgb(121, 72, 8);
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    text-align: center;
 }
-nav li a:hover{
-    color: rgb(153, 192, 226);
+.dropdown{
+    visibility: hidden;
+    opacity:0;
+    min-width:5rem;
+    position:absolute;
+    transition: all 0.5s ease;
+    margin-top:1rem;
+    left:0;
+    display:none;
+    box-shadow:0px 8px 16px 0px;
+}
+.dropdown li{
+    clear:both;
+    width:100%;
+}
+#menu-principal li:hover,
+#menu-principal li:focus-within{
     background-color: rgb(9, 82, 58);
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#menu-principal li a:hover{
+    color: rgb(153, 192, 226);
+    
+}
+#menu-principal li:hover>ul,
+#menu-principal li:focus-within>ul,
+.dropdown ul:hover,
+.dropdown ul:focus{
+    visibility: visible;
+    opacity: 1;
+    display: block;
 }
 article{
     padding: 16px;
     margin-top:30px;
     height:600px;
+    
 }
 .active{
     background-color: rgb(9, 82, 58);
@@ -37,8 +77,8 @@ section{
     height:600px;  
 }
 body{
-  font-size:15px;
-  font-family:Arial, sans-serif;
+  font-size:100%;
+  font-family:Arial, Helvetica, sans-serif;
   background-color: rgb(10, 143, 114);
 }
 tbody a{
@@ -46,4 +86,16 @@ tbody a{
     text-align:center;
     padding:14px 16px;
     text-decoration:none;
+}
+blockquote{
+    margin:3%;
+    padding:1%;
+}
+article h1{
+    margin:15px;
+    padding:2px;
+}
+section h2{
+    margin:15px;
+    padding:2px;
 }
