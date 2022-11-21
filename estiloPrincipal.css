@@ -2,7 +2,41 @@
     margin:0px;
     padding:0px;
 }
-#Principal{
+.Paginas{
+    display: grid;
+    grid-template-areas:"titul" "MenuP" "conteudo""cabeçalho";
+}
+.cabeçalho{
+    grid-area: cabeçalho;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.FotodoIsmael{
+    width: 72px;
+}
+.itemmenuprincipal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.itemmenuprincipal li{
+    list-style: none;
+}
+.itemmenuprincipal li a{
+    text-decoration: none;
+}
+.titulo{
+    grid-area: titul;
+}
+
+.Principal{
+    grid-area: MenuP;
+
+}
+.Principal{
     position: relative;
     font-family: monospace;
     float:left;
@@ -10,14 +44,17 @@
     width: 100%;
     margin-left: 0px;
 }
-#menu-principal{
+.Home{
+    grid-area: conteudo;
+}
+.itemmenuprincipal{
     list-style-type: none;
     padding-left:0;
     position: fixed;
     top: 0;
     width: 100%;
 }
-#menu-principal li{
+.itemmenuprincipal li{
     position:relative;
     padding: 1rem;
     text-decoration: none;
@@ -26,7 +63,7 @@
     display:block;
     float: left;
 }
-#menu-principal li a{
+.itemmenuprincipal li a{
     color: rgb(121, 72, 8);
     text-decoration: none;
     text-align: center;
@@ -51,19 +88,19 @@
     text-decoration: none;
     text-align: right;
 }
-#menu-principal li:hover,
-#menu-principal li:focus-within{
+.itemmenuprincipal li:hover,
+.itemmenuprincipal li:focus-within{
     background-color: rgb(9, 82, 58);
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
 }
-#menu-principal li a:hover{
+.itemmenuprincipal li a:hover{
     color: rgb(153, 192, 226);
     
 }
-#menu-principal li:hover>ul,
-#menu-principal li:focus-within>ul,
+.itemmenuprincipal li:hover>ul,
+.itemmenuprincipal li:focus-within>ul,
 .dropdown ul:hover,
 .dropdown ul:focus{
     visibility: visible;
@@ -126,26 +163,26 @@ article h2{
         max-width:480px;
         font-size: 1.0em;
     }
-   #menu-principal{
+   .itemmenuprincipal{
     width:auto;
     height:auto;
     background-color: rgb(1, 1, 31);
    } 
-   #menu-principal li{
+   .itemmenuprincipal li{
     background-color: rgb(32, 32, 240);
     text-decoration: none;
     width: 100%;
     float:none;
    }
-   #menu-principal li a{
+   .itemmenuprincipal li a{
     color: rgb(57, 57, 235);
     text-align: left;
     display:block;
     outline: none;
    }
-   #menu-principal li:hover,
-   #menu-principal li:focus-within,
-   #menu-principal li a:hover{
+   .itemmenuprincipal li:hover,
+   .itemmenuprincipal li:focus-within,
+   .itemmenuprincipal li a:hover{
     cursor:pointer;
     font-weight: bold;
     color: rgb(5, 5, 36);
@@ -173,4 +210,34 @@ article h2{
         font-size: 1em;
     }
 
+}
+@media screen and(max-width:480px) {
+    .Paginas{
+        grid-template-areas: "cabeçalho cabeçalho"
+                               "MenuP MenuP"
+                               "conteudo conteudo";
+        column-gap: 2px;
+        row-gap: 2px;
+        grid-template-columns: 2fr 1fr;
+    }
+    .cabeçalho{
+        flex-direction: row;
+    }
+    .titulo{
+        width: 100%;
+    }
+    @media screen and(max-width:768px) {
+        .Paginas{
+            grid-template-areas: "cabeçalho cabeçalho cabeçalho"
+                                  "MenuP conteudo conteudo";
+            grid-template-columns: 1fr 4fr 2fr;
+            row-gap: 3px;
+            column-gap: 3px;
+
+        }
+        .itemmenuprincipal{
+            flex-direction: column;
+            text-align: center;
+        }
+    }
 }
